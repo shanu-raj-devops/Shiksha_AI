@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import axios from "axios";
 
-const API = "http://localhost:8000";
+const API = "https://shikshabackend.onrender.com";
 
 const PW_TOPICS = {
   "Class 6": {
