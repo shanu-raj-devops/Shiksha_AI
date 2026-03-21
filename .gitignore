@@ -21,3 +21,13 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# env files (VERY IMPORTANT)
+.env
+*.env
+
+# python
+venv/
+.venv/
+__pycache__/
+*.pyc
