@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import axios from "axios";
 
-const API = import.meta.env.VITE_API_URL;
+const API = "http://localhost:8000"; // Change to your backend URL if different
 
 const PW_TOPICS = {
   "Class 6": {
@@ -230,9 +230,6 @@ export default function Dashboard({ user, onLogout }) {
   };
 
   const askQuestion = async () => {
-    console.log("API:", API);
-    console.log("Session:", sessionId);
-    
     if (!question.trim() || !sessionId) return;
     const q = question.trim();
     setQuestion("");
