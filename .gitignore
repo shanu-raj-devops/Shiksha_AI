@@ -6,6 +6,8 @@ backend/*.pyc
 backend/uploads/
 backend/indexes/
 backend/venv/
+backend/hf-space/
+backend/siksha_backend_sr/
 .env
 *.pyc
 .DS_Store

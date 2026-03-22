@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import axios from "axios";
 
-const API = "http://localhost:8000"; // Change to your backend URL if different
+const API = "https://rajshanu-siksha-backend-sr.hf.space"; // Change to your backend URL if different
 
 const PW_TOPICS = {
   "Class 6": {
