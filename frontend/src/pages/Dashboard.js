@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import axios from "axios";
 
-const API = process.env.REACT_APP_API_URL || "http://localhost:8000";
+const API = import.meta.env.VITE_API_URL;
 
 const PW_TOPICS = {
   "Class 6": {
@@ -175,7 +175,7 @@ export default function Dashboard({ user, onLogout }) {
       setUploadDone(true);
       setMessages([{ role: "assistant", text: `📚 ${file.name} processed! Found ${res.data.chapters_found} chapters. Ask me anything!`, time: new Date().toLocaleTimeString() }]);
       setActiveTab("chat");
-    } catch { alert("Upload failed. Make sure backend is running on port 8000."); }
+    } catch { console.log("Upload failed. Make sure backend is running on port 8000."); }
     setUploading(false);
   };
 
@@ -230,6 +230,9 @@ export default function Dashboard({ user, onLogout }) {
   };
 
   const askQuestion = async () => {
+    console.log("API:", API);
+    console.log("Session:", sessionId);
+    
     if (!question.trim() || !sessionId) return;
     const q = question.trim();
     setQuestion("");
